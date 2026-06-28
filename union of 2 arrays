@@ -42,4 +42,36 @@ public class Main {
         }
         union(n,m,arr1,arr2);
     }
+
+///////////optimized code///////
+
+
+import java.util.*;
+public class Main {
+    public static void union(int n,int m,int[] arr1,int[] arr2){
+        HashSet<Integer> result=new HashSet<>();
+        for (int i = 0; i < arr1.length; i++) {
+            result.add(arr1[i]);
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            result.add(arr2[i]);
+        }
+        System.out.println(result);
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr1=new int[n];
+        for (int i = 0; i < n; i++) {
+            arr1[i]=sc.nextInt();
+        }
+        int m=sc.nextInt();
+        int[] arr2=new int[m];
+        for (int i = 0; i < m; i++) {
+            arr2[i]=sc.nextInt();
+        }
+        union(n,m,arr1,arr2);
+    }
+}
+
 }
