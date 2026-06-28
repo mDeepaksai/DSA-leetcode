@@ -1,0 +1,36 @@
+/////////brute force///////
+
+import java.util.*;
+public class Main {
+    public static void union(int n,int m,int[] arr1,int[] arr2){
+        ArrayList<Integer> nums=new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            nums.add(arr1[i]);
+        }
+        for (int i = 0; i < arr2.length; i++) {
+            nums.add(arr2[i]);
+        }
+        ArrayList<Integer> result=new ArrayList<>();
+        for(int x:nums){
+            if(!result.contains(x)){
+                result.add(x);
+            }
+        }
+        System.out.println(result);
+
+    }
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int[] arr1=new int[n];
+        for (int i = 0; i < n; i++) {
+            arr1[i]=sc.nextInt();
+        }
+        int m=sc.nextInt();
+        int[] arr2=new int[n];
+        for (int i = 0; i < n; i++) {
+            arr2[i]=sc.nextInt();
+        }
+        union(n,m,arr1,arr2);
+    }
+}
