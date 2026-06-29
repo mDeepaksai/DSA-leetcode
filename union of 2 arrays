@@ -44,6 +44,7 @@ public class Main {
     }
 
 ///////////optimized code///////
+////using hashset////
 
 
 import java.util.*;
