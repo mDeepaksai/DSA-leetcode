@@ -1,3 +1,8 @@
+/////very good problem//////
+/////sliding window + hashmap////
+///// as i want to have sum of subarrays with unique element
+///// create hashmap map take first window and store that number with there count then add next element again store that number and there count then remove element and count //////
+
 import java.util.HashMap;
 
 class Solution {
