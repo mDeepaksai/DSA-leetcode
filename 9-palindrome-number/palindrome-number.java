@@ -1,3 +1,5 @@
+////brute force////
+
 class Solution {
     public boolean isPalindrome(int x) {
 
@@ -17,6 +19,29 @@ class Solution {
             }
         }
 
+        return true;
+    }
+}
+
+/////optiimized way/////
+////two pointers////
+
+class Solution {
+    public boolean isPalindrome(int x) {
+
+        String str = Integer.toString(x);
+        int n=str.length();
+        int left =0;
+        int right=n-1;
+        while(left<right){
+            if(str.charAt(left)==str.charAt(right)){
+                left++;
+                right--;
+            }
+            else{
+                return false;
+            }
+        }
         return true;
     }
 }
