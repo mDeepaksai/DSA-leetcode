@@ -1,3 +1,35 @@
+////brute force/////
+
+
+import java.util.HashMap;
+
+class Solution {
+    public int totalFruit(int[] fruits) {
+        int ans = 0;
+
+        for (int left = 0; left < fruits.length; left++) {
+            HashMap<Integer, Integer> map = new HashMap<>();
+            int count = 0;
+
+            for (int right = left; right < fruits.length; right++) {
+                map.put(fruits[right], map.getOrDefault(fruits[right], 0) + 1);
+
+                if (map.size() > 2) {
+                    break;
+                }
+
+                count++;
+            }
+
+            ans = Math.max(ans, count);
+        }
+
+        return ans;
+    }
+}
+
+////opimized code/////
+
 class Solution {
     public int totalFruit(int[] fruits) {
         int ans = 0;
