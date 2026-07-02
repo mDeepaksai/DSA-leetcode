@@ -1,6 +1,34 @@
+////brute force/////
+
+
 class Solution {
     public int numSubarrayProductLessThanK(int[] nums, int k) {
-        // Handle edge cases where k is 0 or 1 (no subarrays possible)
+        int n = nums.length;
+        int count = 0;
+
+        for (int i = 0; i < n; i++) {
+            int product = 1;
+
+            for (int j = i; j < n; j++) {
+                product *= nums[j];
+
+                if (product < k) {
+                    count++;
+                } else {
+                    break;
+                }
+            }
+        }
+
+        return count;
+    }
+}
+
+/////optimizied way//////
+
+
+class Solution {
+    public int numSubarrayProductLessThanK(int[] nums, int k) {
         if (k <= 1) return 0;
 
         int totalCount = 0;
