@@ -1,5 +1,5 @@
 ////brute force/////
-
+////using hashmap because we need to store the freq of the elements like num:how many that numbers occurs/////
 
 import java.util.HashMap;
 
@@ -29,6 +29,7 @@ class Solution {
 }
 
 ////opimized code/////
+//////using sliding window + hashmap//////
 
 class Solution {
     public int totalFruit(int[] fruits) {
