@@ -1,3 +1,6 @@
+////optimized way/////
+////using hashmap because we are using freq/////
+
 class Solution {
     public int singleNumber(int[] nums) {
         HashMap<Integer,Integer> map=new HashMap<>();
