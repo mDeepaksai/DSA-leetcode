@@ -1,3 +1,6 @@
+////optimal way////
+////prefix sum basic////
+
 class Solution {
     public int[] runningSum(int[] nums) {
         int[] res=new int[nums.length];
