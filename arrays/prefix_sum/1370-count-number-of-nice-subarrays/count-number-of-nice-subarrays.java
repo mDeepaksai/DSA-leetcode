@@ -1,3 +1,5 @@
+///hashmap + prefixsum////
+
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
         HashMap<Integer,Integer> map=new HashMap<>();
