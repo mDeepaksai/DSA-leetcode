@@ -1,3 +1,7 @@
+////optimal way/////
+///// using prefixsum + hashmap/////
+/////map.put(0,1) because asked about freq/////
+
 class Solution {
     public int numSubarraysWithSum(int[] nums, int goal) {
        HashMap<Integer,Integer> map=new HashMap<>();
