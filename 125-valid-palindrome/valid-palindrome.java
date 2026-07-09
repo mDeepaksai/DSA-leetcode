@@ -1,3 +1,6 @@
+////optimal way////
+////using two pointer////
+
 class Solution {
     public boolean isPalindrome(String s) {
         int n=s.length();
