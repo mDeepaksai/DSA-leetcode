@@ -1,3 +1,6 @@
+//// optimal way ////
+////using prefix sum///// 
+
 class Solution {
     public int minSubarray(int[] nums, int p) {
         long totalSum = 0;
