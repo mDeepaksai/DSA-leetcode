@@ -22,6 +22,7 @@ class Solution {
 
 ////optimized code////
 ///sliding window///
+////first we will find the max sum in array then we will divide it with k so we will get max avg because if we divide max sum with that k then we will get max avg only na////
 
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
