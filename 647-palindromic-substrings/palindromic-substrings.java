@@ -1,3 +1,7 @@
+////very good question////
+////brute force////
+
+
 class Solution {
     public int countSubstrings(String s) {
         int n=s.length();
@@ -17,5 +21,33 @@ class Solution {
             right++;
         }
         return count;
+    }
+}
+
+////optimal way////
+
+
+class Solution {
+    public int countSubstrings(String s) {
+       int n=s.length();
+       int count=0;
+       for(int i=0;i<n;i++){
+        for(int j=i;j<n;j++){
+            if(ispalindromal(s,i,j)){
+                count++;
+            }
+        }
+       } 
+       return count;
+    }
+    private boolean ispalindromal(String s,int left,int right){
+        while(left<right){
+            if(s.charAt(left)!=s.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 }
