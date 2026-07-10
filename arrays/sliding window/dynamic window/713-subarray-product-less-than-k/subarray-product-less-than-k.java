@@ -25,6 +25,8 @@ class Solution {
 }
 
 /////optimizied way//////
+////sliding window, simple problem only////
+//// in normal amx sum of sliding window there we do add the next element and remove the old element but in product we will divide the the next element nothing else//// 
 
 
 class Solution {
