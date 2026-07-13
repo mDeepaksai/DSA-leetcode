@@ -1,3 +1,7 @@
+////optimal way////
+////
+////prefix sum - here first we find prefix sum arr by that arr we will find remaining index and all ////
+
 class NumArray {
     int[] prefix;
     public NumArray(int[] nums) {
