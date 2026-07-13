@@ -1,3 +1,6 @@
+////optimal way////
+////two pointers////
+
 class Solution {
     public int[] shuffle(int[] nums, int n) {
         int[] res=new int[nums.length];
