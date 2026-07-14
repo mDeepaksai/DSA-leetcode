@@ -1,3 +1,7 @@
+////using binary search algo////
+////we can solve it by linear search also but time compl will be O(n) by in binary search algo it will O(logN)////
+
+
 class Solution {
     public int search(int[] nums, int target) {
         int n=nums.length;
