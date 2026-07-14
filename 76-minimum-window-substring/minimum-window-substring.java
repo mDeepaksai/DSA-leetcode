@@ -1,3 +1,43 @@
+////brute force////
+
+
+class Solution {
+    public String minWindow(String s, String t) {
+        Map<Character,Integer> tmap=new HashMap<>();
+        for(char c: t.toCharArray()){
+            tmap.put(c,tmap.getOrDefault(c,0)+1);
+        }
+        String ans="";
+        for(int i=0;i<s.length();i++){
+            Map<Character,Integer> smap=new HashMap<>();
+            for(int j=i;j<s.length();j++){
+                char ch=s.charAt(j);
+                smap.put(ch,smap.getOrDefault(ch,0)+1);
+                if(isvalid(smap,tmap)){
+                    String sub=s.substring(i,j+1);
+                    if(ans.equals("") || sub.length() < ans.length()){
+                        ans=sub;
+                    }
+                }
+            }
+        }
+        return ans;
+    }
+    public boolean isvalid(Map<Character,Integer> smap,Map<Character,Integer> tmap){
+        for(char c:tmap.keySet()){
+            if(smap.getOrDefault(c,0)<tmap.get(c)){
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+////using hashmap + sliding////
+
+
+
 class Solution {
     public String minWindow(String s, String t) {
 
