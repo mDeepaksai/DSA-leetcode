@@ -1,3 +1,23 @@
+////brute force O(N)////
+
+
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+        for(int i=0;i<nums.length;i++){
+            if(nums[i]>=target){
+                return i;
+            }
+        }
+        return nums.length;
+    }
+}
+
+
+////optimal way////
+//// at the end we are returning the left because when left and right pointer is pointing to same number at that time that number should be inserted at that position////
+
+
+
 class Solution {
     public int searchInsert(int[] nums, int target) {
         int left=0;
