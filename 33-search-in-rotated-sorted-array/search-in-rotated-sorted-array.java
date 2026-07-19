@@ -1,3 +1,6 @@
+////optimal way////
+////binary search////
+
 class Solution {
     public int search(int[] nums, int target) {
         int n = nums.length;
