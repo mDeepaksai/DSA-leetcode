@@ -1,3 +1,6 @@
+//brute force 
+//time comp will O(n**2)
+
 class Solution {
     public int maxProduct(int[] nums) {
         int n=nums.length;
@@ -10,5 +13,27 @@ class Solution {
         }
        }
         return max;
+    }
+}
+
+//optimal way
+//time comp will O(n)
+//we will find largest and sec largest then product of that will be max only na
+
+class Solution {
+    public int maxProduct(int[] nums) {
+        int max1 = Integer.MIN_VALUE;
+        int max2 = Integer.MIN_VALUE;
+
+        for (int num : nums) {
+            if (num > max1) {
+                max2 = max1;
+                max1 = num;
+            } else if (num > max2) {
+                max2 = num;
+            }
+        }
+
+        return (max1 - 1) * (max2 - 1);
     }
 }
