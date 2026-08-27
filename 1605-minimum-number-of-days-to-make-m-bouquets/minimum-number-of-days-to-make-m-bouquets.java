@@ -1,3 +1,50 @@
+// brute forxe
+
+class Solution {
+    public int minDays(int[] bloomDay, int m, int k) {
+        if ((long) m * k > bloomDay.length) return -1;
+
+        int low = Integer.MAX_VALUE;
+        int high = Integer.MIN_VALUE;
+
+        for (int day : bloomDay) {
+            low = Math.min(low, day);
+            high = Math.max(high, day);
+        }
+
+        for (int days = low; days <= high; days++) {
+            if (noOfDays(days, bloomDay, m, k)) {
+                return days;
+            }
+        }
+
+        return -1;
+    }
+
+    private boolean noOfDays(int days, int[] bloomDay, int m, int k) {
+        int count = 0;
+        int b = 0;
+
+        for (int i = 0; i < bloomDay.length; i++) {
+            if (bloomDay[i] <= days) {
+                count++;
+                if (count == k) {
+                    b++;
+                    count = 0;
+                }
+            } else {
+                count = 0; 
+            }
+        }
+
+        return b >= m; 
+    }
+}
+
+
+// optimal code
+
+
 import java.util.Arrays;
 
 class Solution {
