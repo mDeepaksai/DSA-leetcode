@@ -1,4 +1,4 @@
-public class recursion {
+public class sum {
     public static void printSum(int i,int n,int sum){
         if(i==n){
             sum+=i;
