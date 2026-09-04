@@ -1,4 +1,4 @@
-functional
+// functional
 
 class Solution {
     int factorial(int n) {
@@ -11,7 +11,7 @@ class Solution {
     }
 }
 
-parameterized
+// parameterized
 
 class Solution {
     private static int  factHelper(int n,int ans){
