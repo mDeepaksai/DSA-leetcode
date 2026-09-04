@@ -1,3 +1,5 @@
+// O(logN)
+
 class Solution {
 
     public double myPow(double x, int n) {
@@ -30,4 +32,34 @@ class Solution {
         // n is odd
         return x * half * half;
     }
+
+    
+// O(N)
+
+    
+    class Solution {
+
+    public double myPow(double x, int n) {
+
+        long N = n;
+
+        if (N < 0) {
+            x = 1 / x;
+            N = -N;
+        }
+
+        return power(x, N);
+    }
+
+    static double power(double x, long n) {
+
+        // Base case
+        if (n == 0) {
+            return 1;
+        }
+
+        // Recursive call
+        return x * power(x, n - 1);
+    }
+}
 }
