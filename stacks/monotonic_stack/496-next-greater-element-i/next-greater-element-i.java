@@ -1,3 +1,25 @@
+// brute force
+
+class Solution {
+    public ArrayList<Integer> nextLargerElement(int[] arr) {
+        int n=arr.length;
+        ArrayList<Integer> ans=new ArrayList<>();
+        for(int i=0;i<n;i++){
+            int greater=-1;
+            for(int j=i+1;j<n;j++){
+                if(arr[j]>arr[i]){
+                    greater=arr[j];
+                    break;
+                }
+            }
+            ans.add(greater);
+        }
+        return ans;
+    }
+}
+
+// optimized code
+
 class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int[] nextGreater = new int[10001];
