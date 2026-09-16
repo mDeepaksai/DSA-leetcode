@@ -1,16 +1,20 @@
 class Solution {
     public boolean isValid(String s) {
-        StringBuilder sb=new StringBuilder(s);
-        int i=0;
-        while(i<sb.length()-1){
-            char a=sb.charAt(i);
-            char b=sb.charAt(i+1);
-            if((a=='(' && b==')') || (a=='{' && b=='}') || (a=='[' && b==']')){
-                sb.delete(i,i+2);
-                if(i>0) i--;
+        Stack<Character>st=new Stack<>();
+        HashMap<Character,Character>map=new HashMap<>();
+        map.put(')','(');
+        map.put('}','{');
+        map.put(']','[');
+        for(char ch:s.toCharArray()){
+            if(map.containsKey(ch)){
+                if(st.isEmpty() || st.pop()!=map.get(ch)){
+                    return false;
+                }
             }
-            else i++;
+            else{
+                st.push(ch);
+            }
         }
-        return sb.length()==0;
+        return st.isEmpty();
     }
 }
